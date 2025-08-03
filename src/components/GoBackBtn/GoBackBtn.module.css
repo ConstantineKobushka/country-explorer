@@ -1,0 +1,15 @@
+.btn {
+  color: var(--color-white);
+  display: inline-block;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--color-light);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 12px 18px;
+  transition: background-color var(--animation-cubicBezie);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--color-imageBackground);
+}
