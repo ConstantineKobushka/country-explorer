@@ -3,6 +3,8 @@
 🔗 **Демо:**
 [https://country-explorer-ochre-three.vercel.app/](https://country-explorer-ochre-three.vercel.app/)
 
+![Country Explorer Preview](preview.png)
+
 ## 🔎 Опис проєкту
 
 **Country Explorer** — це сучасний вебзастосунок для зручного перегляду країн

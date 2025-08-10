@@ -3,6 +3,8 @@
 🔗 **Live Demo:**
 [https://country-explorer-ochre-three.vercel.app/](https://country-explorer-ochre-three.vercel.app/)
 
+![Country Explorer Preview](preview.png)
+
 ## 🔎 Project Description
 
 **Country Explorer** is a modern web application that helps you discover
