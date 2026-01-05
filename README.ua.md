@@ -77,4 +77,5 @@
 git clone https://github.com/ConstantineKobushka/country-explorer
 cd country-explorer
 npm install
+npm run dev
 ```
