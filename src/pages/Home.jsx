@@ -7,7 +7,7 @@ import { getCountries } from 'service/countryApi';
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
-  const [loader, setLoader] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const location = useLocation();
 
@@ -15,13 +15,13 @@ const Home = () => {
     const fetchCountries = async () => {
       try {
         setError('');
-        setLoader(true);
+        setIsLoading(true);
         const result = await getCountries();
         setCountries(result);
       } catch (error) {
         setError(error.message);
       } finally {
-        setLoader(false);
+        setIsLoading(false);
       }
     };
 
@@ -32,7 +32,7 @@ const Home = () => {
     <Section>
       <Container>
         {error && <Heading title={error} bottom />}
-        {loader && <Loader />}
+        {isLoading && <Loader />}
         <CountryList
           countries={countries}
           state={{

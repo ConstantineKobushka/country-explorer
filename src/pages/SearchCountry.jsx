@@ -15,7 +15,7 @@ import { fetchByRegion } from 'service/countryApi';
 
 const SearchCountry = () => {
   const [countries, setCountries] = useState([]);
-  const [loader, setLoader] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
@@ -28,13 +28,13 @@ const SearchCountry = () => {
     const fetchCountries = async () => {
       try {
         setError('');
-        setLoader(true);
+        setIsLoading(true);
         const result = await fetchByRegion(region);
         setCountries(result);
       } catch (error) {
         setError(error.message);
       } finally {
-        setLoader(false);
+        setIsLoading(false);
       }
     };
 
@@ -50,7 +50,7 @@ const SearchCountry = () => {
       <Container>
         <SearchForm onSubmit={onSubmit} />
         {error && <Heading title={error} bottom />}
-        {loader && <Loader />}
+        {isLoading && <Loader />}
         <CountryList
           countries={countries}
           state={{
